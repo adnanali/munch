@@ -1,13 +1,40 @@
 ---
-Message:
-    columns:
-        id:
-            primary: true
-            autoincrement: true
-            type: integer(4)
-        posted:
-            type: timestamp
-        name:
-            type: string(255)
-        message:
-            type: string
+User: 
+  tableName: users
+  columns: 
+    id: 
+      unsigned: 0
+      primary: true
+      notnull: true
+      autoincrement: true
+      type: integer(4)
+    email: 
+      fixed: false
+      primary: false
+      notnull: true
+      autoincrement: false
+      type: string(255)
+    password: 
+      fixed: false
+      primary: false
+      notnull: true
+      autoincrement: false
+      type: string(50)
+    first_name: 
+      fixed: false
+      primary: false
+      notnull: true
+      autoincrement: false
+      type: string(100)
+    last_name: 
+      fixed: false
+      primary: false
+      notnull: true
+      autoincrement: false
+      type: string(100)
+    url: 
+      fixed: false
+      primary: false
+      notnull: true
+      autoincrement: false
+      type: string(255)

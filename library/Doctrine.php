@@ -956,7 +956,7 @@ final class Doctrine
      * Get the Doctrine_Table object for the passed model
      *
      * @param string $componentName
-     * @return void
+     * @return object Doctrine_Table
      */
     public static function getTable($componentName)
     {

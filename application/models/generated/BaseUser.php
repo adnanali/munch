@@ -11,9 +11,9 @@ abstract class BaseUser extends Doctrine_Record
     $this->setTableName('users');
     $this->hasColumn('id', 'integer', 4, array('unsigned' => 0, 'primary' => true, 'notnull' => true, 'autoincrement' => true));
     $this->hasColumn('email', 'string', 255, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
+    $this->hasColumn('password', 'string', 50, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
     $this->hasColumn('first_name', 'string', 100, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
     $this->hasColumn('last_name', 'string', 100, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
-    $this->hasColumn('password', 'string', 20, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
     $this->hasColumn('url', 'string', 255, array('fixed' => false, 'primary' => false, 'notnull' => true, 'autoincrement' => false));
   }
 

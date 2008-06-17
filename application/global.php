@@ -13,6 +13,7 @@ define ('ROOT_DIR', dirname(dirname(__FILE__)));
 
 $paths = array ( get_include_path(),
 	ROOT_DIR . '/library',
+	ROOT_DIR . '/application/forms',
 	ROOT_DIR . '/application/models',
 	ROOT_DIR . '/application/models/generated',
 );

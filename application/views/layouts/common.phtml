@@ -5,14 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="en" />
     <title><?php echo $this->escape($this->title) ?></title>
-    <link rel="stylesheet" href="<?php echo $this->baseUrl() ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="<?php echo $this->baseUrl() ?>/css/style.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="<?php echo $this->baseUrl() ?>/css/blueprint/print.css" type="text/css" media="print" />
-    <!--[if IE]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+    <?php echo $this->headScripts(null) ?>
 </head>
 <body>
    
-    <div class="container showgrid">
+    <div class="container">
 
         <div class="block">
             <div id="header" class="column span-24">
