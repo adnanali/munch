@@ -21,6 +21,7 @@ Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
 $layout = Zend_Layout::startMvc(array (
 	'layout' => 'common',
 	'layoutPath' => ROOT_DIR . '/application/views/layouts',
+	'pluginClass' => 'Core_Layout_Controller_Plugin_Layout',	
 ));
 
 
