@@ -401,7 +401,7 @@ class Zend_Form_Element implements Zend_Validate_Interface
      * @param  bool $allowBrackets
      * @return string
      */
-    public function filterName($value, $allowBrackets = false)
+    public function filterName($value, $allowBrackets = true)
     {
         $charset = '^a-zA-Z0-9_\x7f-\xff';
         if ($allowBrackets) {
