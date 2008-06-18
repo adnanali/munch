@@ -4,7 +4,7 @@ include_once dirname(__FILE__) . "/global.php";
 
 $controller = Zend_Controller_Front::getInstance();
 
-$controller->addControllerDirectory(ROOT_DIR . '/application/controllers');
+//$controller->addControllerDirectory(ROOT_DIR . '/application/controllers');
 $controller->addModuleDirectory(ROOT_DIR . '/application/modules');
 
 $controller->throwExceptions(true);
