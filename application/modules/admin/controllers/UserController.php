@@ -13,17 +13,20 @@ class Admin_UserController extends Core_Controller_Action {
 		
 		$request = $this->getRequest();
 		//$loginForm->persistData();
-		if ($request->isPost()) {
-			
-			print_r ($request->getParams());
-			if ($loginForm->isValid($request->getParams())) {
-				// do further login validation here.
-				
-			}
-			$loginForm->populate($request->getParams());
-		}
-									
 		$this->view->form = $loginForm;
+		if (!$request->isPost()) {
+			return;
+		} else {
+			print_r ($request->getParams());
+			if (!$this->view->form->isValid($request->getParams())) {
+				// do further login validation here.
+        		$loginForm->populate($request->getParams());
+				return;
+			}
+		}
+		
+		// code will get here if form is valid
+									
 		
 		
 	}

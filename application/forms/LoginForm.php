@@ -29,8 +29,8 @@ class LoginForm extends Zend_Form {
 		$form->addElement($email)
 			 ->addElement($password);
 			 
+		$form->addElement($submit);		
 		$this->setSubForms(array('login' => $form));
-		$this->addElement($submit);		
 	}
 }
 ?>
