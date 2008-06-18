@@ -12,10 +12,7 @@ class Core_Layout_Controller_Plugin_Layout extends Zend_Layout_Controller_Plugin
     {
     	//die ($this->getLayout()->getLayoutPath());
         $this->getLayout()->setLayoutPath(
-            dirname(dirname(
-                $this->getLayout()->getLayoutPath()
-            ))
-            . DIRECTORY_SEPARATOR . 'modules/' . $moduleName . '/views/layouts'
+         ROOT_DIR . '/application/modules/' . $moduleName . '/views/layouts'
         );
         //$this->getLayout()->setLayout($moduleName);
     }

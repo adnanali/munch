@@ -1,6 +1,6 @@
 <?php
 
-class Admin_IndexController extends Core_Controller_Action {
+class Admin_IndexController extends AdminController {
 
 	public function indexAction() {
 		// if the user is logged in, then redirect to dashboard page
@@ -10,15 +10,5 @@ class Admin_IndexController extends Core_Controller_Action {
 	
 	}
 	
-	public function navAction() {
-		$baseUrl = $this->getRequest()->getBaseUrl();
-		$this->view->baseUrl = $baseUrl;
-		$nav = array (
-			'Home' => '/admin/',
-			'Login' => '/admin/user/login', 
-		);
-		
-		$this->view->links = $nav;
-	}
 }
 ?>

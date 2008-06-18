@@ -9,4 +9,10 @@ $user = Doctrine::getTable('User')->find(1);
 
 echo $user->password;
 
+$auth = new Core_Auth_Adapter('adnan.ali@gmail.com', 'turkey11');
+
+if ($auth->authenticate()->isValid()) {
+	echo "YES!";
+}
+
 ?>

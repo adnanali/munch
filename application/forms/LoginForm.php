@@ -31,6 +31,14 @@ class LoginForm extends Zend_Form {
 			 
 		$form->addElement($submit);		
 		$this->setSubForms(array('login' => $form));
+		
+		if (isset($_GET['redirectTo'])) {
+			$redirectTo = $this->createElement('hidden', 'redirectTo')
+			                   ->setValue($_GET['redirectTo']);
+
+			$this->addElement($redirectTo);
+		}
+				
 	}
 }
 ?>
